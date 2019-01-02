@@ -1,0 +1,14 @@
+[ignore]
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+esproposal.optional_chaining=enable
+module.name_mapper='.*\(.css\|.scss\|.png\|.jpeg\|.jpg\|.gif\|.svg\)' -> 'empty/object'
+module.name_mapper='^\(.*\)' -> '<PROJECT_ROOT>/src/\1'
+
+[strict]
