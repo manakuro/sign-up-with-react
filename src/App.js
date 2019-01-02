@@ -1,28 +1,24 @@
 //@flow
 import * as React from 'react'
-import logo from 'logo.svg'
-import 'App.css'
+import { ConnectedRouter } from 'connected-react-router'
+import Routes from 'routes/routes'
 
-type Props = {}
+type Props = {
+  history: History,
+}
 
 class App extends React.Component<Props> {
+  constructor(props: Props) {
+    super(props)
+  }
+
   render() {
+    const { history } = this.props
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer">
-            Learn React
-          </a>
-        </header>
-      </div>
+      <ConnectedRouter history={history}>
+        <Routes />
+      </ConnectedRouter>
     )
   }
 }
