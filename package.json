@@ -19,12 +19,7 @@
     "commit": "git-cz"
   },
   "lint-staged": {
-    "linters": {
-      "*.{js,json}": [
-        "eslint --fix",
-        "git add"
-      ]
-    }
+    "*.js": ["eslint --fix", "git add"]
   },
   "browserslist": [
     ">0.2%",
