@@ -16,9 +16,9 @@
     "start-js": "react-app-rewired start",
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
-    "precommit": "lint-staged",
+    "precommit": "yarn flow && lint-staged",
     "commit": "git-cz",
-    "flow": "flow"
+    "flow": "flow check"
   },
   "lint-staged": {
     "*.js": [
